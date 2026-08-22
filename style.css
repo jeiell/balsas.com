@@ -686,37 +686,75 @@ body {
 }
 
 /* ===================================
-   RESPONSIVIDADE E MOBILE-FIRST REAL
+   HOVER EFFECTS (GLOBAL - PC & DISPOSITIVOS)
 =================================== */
 
-/* Ajustes de tipografia fluida */
-.hero-headline h1 {
-  font-size: clamp(1.3rem, 4vw, 1.8rem);
+/* 1. Canais / Redes Sociais */
+.channel-item {
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 8px 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.hero-headline p {
-  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+.channel-item i {
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* TABLETS E TELAS MÉDIAS (até 992px) */
+.channel-item:hover {
+  transform: translateY(-5px);
+}
+
+.channel-item:hover i {
+  color: var(--primary-red);
+  transform: scale(1.25);
+}
+
+.channel-item:hover .name {
+  color: var(--primary-red);
+}
+
+/* 2. Etapas do Workflow (Como Funciona) */
+.step-item {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.step-item i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.step-item:hover {
+  transform: translateY(-3px);
+}
+
+.step-item:hover i {
+  color: var(--primary-red);
+  transform: scale(1.25);
+}
+
+.step-item:hover .step-title {
+  color: var(--primary-red);
+}
+
+/* Animação na seta ao passar o mouse */
+.step-item:hover + .step-arrow {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+
+/* ===================================
+   RESPONSIVIDADE MOBILE CIRÚRGICA
+=================================== */
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 @media (max-width: 992px) {
-  .hero-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .hero-headline {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .hero-nav {
-    justify-content: center;
-    gap: 20px;
-  }
-
   .grid-three-col,
   .main-grid-layout,
   .middle-features-grid,
@@ -725,110 +763,82 @@ body {
     gap: 20px;
   }
 
-  .content-pillars-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .hero-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .footer-cta, 
-  .footer-brand-logo {
+  .hero-headline {
     text-align: center;
-    justify-content: center;
   }
 }
 
-/* SMARTPHONES (até 600px) */
+/* SMARTPHONES (Apenas Ajustes de Layout) */
 @media (max-width: 600px) {
+  .section-container,
   .hero-section {
-    padding: 25px 4% 20px 4%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 100%;
   }
 
-  .main-logo-img {
-    height: 70px; /* Logo no tamanho ideal para telas pequenas */
-  }
-
-  /* Menu do topo compacto em 3 colunas no celular */
+  /* Menu do topo: 3 na 1ª linha, 2 centralizados na 2ª linha */
   .hero-nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px 10px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px 5px;
     width: 100%;
+    justify-items: center;
+  }
+
+  .hero-nav .nav-item:nth-child(1),
+  .hero-nav .nav-item:nth-child(2),
+  .hero-nav .nav-item:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .hero-nav .nav-item:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .hero-nav .nav-item:nth-child(5) {
+    grid-column: 4 / span 2;
   }
 
   .nav-item {
     font-size: 0.65rem;
+    text-align: center;
   }
 
   .nav-item i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
-  /* Grid de Conteúdos em 2 Colunas (Mobile Clean) */
-  .content-pillars-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  /* Correção de travamento das bordas horizontais */
+  .info-card,
+  .featured-banner,
+  .pillar-item,
+  .sponsor-card,
+  .social-channels-box,
+  .workflow-box {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .pillar-img-box {
-    height: 130px;
-  }
-
-  .pillar-item h3 {
-    font-size: 0.75rem;
-  }
-
-  .pillar-item p {
-    font-size: 0.65rem;
-  }
-
-  /* Onde Estamos em Linha (Horizontal) */
   .channels-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    align-items: start;
+    gap: 5px;
   }
 
-  .channel-item i {
-    font-size: 1.3rem;
-  }
-
-  .channel-item .name {
-    font-size: 0.55rem;
-  }
-
-  .channel-item .handle {
-    display: none; /* Oculta arrobas no celular para não poluir */
-  }
-
-  /* Como Funciona em Grid Compacto */
   .workflow-steps {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-    align-items: start;
   }
 
   .step-arrow {
-    display: none; /* Esconde setas para caber perfeitamente na horizontal */
-  }
-
-  .step-item i {
-    font-size: 1.1rem;
-  }
-
-  .step-item .step-title {
-    font-size: 0.6rem;
-  }
-
-  .step-item .step-desc {
-    font-size: 0.55rem;
-  }
-
-  .footer-grid {
-    text-align: center;
-  }
-
-  .footer-list li {
-    justify-content: center;
+    display: none;
   }
 }
