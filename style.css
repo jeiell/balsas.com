@@ -21,9 +21,15 @@ body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.5;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* 1. HERO HEADER */
+/* ===================================
+   1. DESKTOP (PADRÃO - TELA GRANDE)
+=================================== */
+
+/* HERO HEADER */
 .hero-section {
   background: linear-gradient(rgba(10, 11, 13, 0.82), rgba(10, 11, 13, 0.92)),
               url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -35,7 +41,7 @@ body {
 .hero-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Alinha os topos da logo e do texto */
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 40px;
@@ -53,48 +59,18 @@ body {
   gap: 15px;
 }
 
-/* REGRA DAS LOGOS (AJUSTADAS) */
 .main-logo-img {
-  height: 150px; /* Tamanho proporcional e elegante para o topo */
+  height: 180px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 .footer-logo-img {
-  height: 85px; /* Tamanho ajustado para o rodapé */
+  height: 85px;
   width: auto;
   object-fit: contain;
   display: block;
-}
-
-.logo-icon {
-  font-size: 3.5rem;
-  color: var(--primary-red);
-  line-height: 1;
-}
-
-.logo-text {
-  font-size: 3.2rem;
-  font-weight: 900;
-  letter-spacing: -1px;
-  line-height: 0.9;
-  text-transform: uppercase;
-}
-
-.logo-text span {
-  color: var(--primary-red);
-}
-
-.slogan {
-  margin-top: 12px;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--text-light);
-  border-bottom: 2px solid var(--primary-red);
-  padding-bottom: 4px;
 }
 
 .hero-headline {
@@ -153,7 +129,7 @@ body {
   color: var(--primary-red);
 }
 
-/* 2. ESTRUTURA DO CONTEÚDO */
+/* ESTRUTURA DO CONTEÚDO */
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -268,7 +244,7 @@ body {
   color: #ffffff;
 }
 
-/* 3. NOSSOS CONTEÚDOS */
+/* NOSSOS CONTEÚDOS */
 .section-header-title {
   color: var(--primary-red);
   font-size: 1.1rem;
@@ -433,7 +409,7 @@ body {
   font-weight: bold;
 }
 
-/* 4. REDES SOCIAIS & FLUXO */
+/* REDES SOCIAIS & FLUXO (DESKTOP - FOTO 2) */
 .middle-features-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -463,12 +439,14 @@ body {
   gap: 5px;
   text-decoration: none;
   color: #333;
-
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 5px;
 }
 
 .channel-item i {
   font-size: 1.6rem;
   color: var(--primary-red);
+  transition: transform 0.3s ease;
 }
 
 .channel-item .name {
@@ -480,6 +458,18 @@ body {
 .channel-item .handle {
   font-size: 0.6rem;
   color: #777;
+}
+
+.channel-item:hover {
+  transform: translateY(-5px);
+}
+
+.channel-item:hover i {
+  transform: scale(1.2);
+}
+
+.channel-item:hover .name {
+  color: var(--primary-red);
 }
 
 .workflow-steps {
@@ -496,12 +486,14 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  transition: transform 0.3s ease;
 }
 
 .step-item i {
   font-size: 1.3rem;
   color: #222;
   margin-bottom: 4px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .step-item .step-title {
@@ -522,12 +514,26 @@ body {
   font-weight: bold;
 }
 
-/* 5. RODAPÉ */
+.step-item:hover {
+  transform: translateY(-3px);
+}
+
+.step-item:hover i {
+  color: var(--primary-red);
+  transform: scale(1.2);
+}
+
+.step-item:hover .step-title {
+  color: var(--primary-red);
+}
+
+/* RODAPÉ (DESKTOP - FOTO 2) */
 .footer-section {
   background: var(--bg-dark);
   color: var(--text-light);
   padding: 50px 6% 30px 6%;
   border-top: 3px solid var(--primary-red);
+  text-align: left;
 }
 
 .footer-grid {
@@ -535,6 +541,12 @@ body {
   grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
   gap: 30px;
   margin-bottom: 40px;
+  text-align: left;
+}
+
+.footer-col {
+  display: block;
+  text-align: left;
 }
 
 .footer-col h4 {
@@ -544,16 +556,19 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .footer-col p {
   font-size: 0.8rem;
   color: #aaa;
   line-height: 1.5;
+  text-align: left;
 }
 
 .footer-list {
   list-style: none;
+  padding: 0;
 }
 
 .footer-list li {
@@ -562,6 +577,7 @@ body {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
 }
 
@@ -591,16 +607,9 @@ body {
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  font-size: 1.8rem;
-  font-weight: 900;
 }
 
-.footer-brand-logo i,
-.footer-brand-logo span span {
-  color: var(--primary-red);
-}
-
-/* 6. MODAL DE VÍDEO */
+/* MODAL DE VÍDEO */
 .video-modal {
   display: none;
   position: fixed;
@@ -685,84 +694,15 @@ body {
   line-height: 1.3;
 }
 
-/* ===================================
-   HOVER EFFECTS (GLOBAL - PC & DISPOSITIVOS)
-=================================== */
-
-/* 1. Canais / Redes Sociais */
-.channel-item {
-  transition: transform 0.3s ease, color 0.3s ease;
-  padding: 8px 5px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.channel-item i {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.channel-item:hover {
-  transform: translateY(-5px);
-}
-
-.channel-item:hover i {
-  color: var(--primary-red);
-  transform: scale(1.25);
-}
-
-.channel-item:hover .name {
-  color: var(--primary-red);
-}
-
-/* 2. Etapas do Workflow (Como Funciona) */
-.step-item {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.step-item i {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.step-item:hover {
-  transform: translateY(-3px);
-}
-
-.step-item:hover i {
-  color: var(--primary-red);
-  transform: scale(1.25);
-}
-
-.step-item:hover .step-title {
-  color: var(--primary-red);
-}
-
-/* Animação na seta ao passar o mouse */
-.step-item:hover + .step-arrow {
-  transform: translateX(4px);
-  transition: transform 0.3s ease;
-}
-
 
 /* ===================================
-   RESPONSIVIDADE MOBILE CIRÚRGICA (RESET TOTAL DE VAZAMENTO)
+   2. REGRAS EXCLUSIVAS PARA CELULAR (MOBILE)
 =================================== */
-
-/* Trava a tela globalmente contra rolagem horizontal */
-html, body {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden !important;
-  margin: 0;
-  padding: 0;
-}
 
 @media (max-width: 992px) {
   .grid-three-col,
   .main-grid-layout,
-  .middle-features-grid,
-  .footer-grid {
+  .middle-features-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -778,128 +718,136 @@ html, body {
   }
 }
 
-/* SMARTPHONES (Ajustes de Encaixe 100% e Alinhamento) */
 @media (max-width: 600px) {
-  /* Reset de paddings para não estourar a largura da tela */
-  *, *::before, *::after {
-    box-sizing: border-box !important;
-  }
-
   .section-container,
   .hero-section {
     padding-left: 12px !important;
     padding-right: 12px !important;
     width: 100% !important;
-    max-width: 100vw !important;
   }
 
-  /* 1. TOPO DA PÁGINA (LOGO E NAVEGAÇÃO) */
+  /* Topo no Celular */
+  .main-logo-img {
+    height: 75px;
+  }
+
   .hero-nav {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px 5px;
-    width: 100%;
-    justify-items: center;
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 12px 5px !important;
+    width: 100% !important;
+    justify-items: center !important;
   }
 
   .hero-nav .nav-item:nth-child(1),
   .hero-nav .nav-item:nth-child(2),
   .hero-nav .nav-item:nth-child(3) {
-    grid-column: span 2;
+    grid-column: span 2 !important;
   }
 
   .hero-nav .nav-item:nth-child(4) {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 2 !important;
   }
 
   .hero-nav .nav-item:nth-child(5) {
-    grid-column: 4 / span 2;
+    grid-column: 4 / span 2 !important;
   }
 
   .nav-item {
-    font-size: 0.65rem;
-    text-align: center;
+    font-size: 0.65rem !important;
+    text-align: center !important;
   }
 
   .nav-item i {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 
-  /* 2. CORREÇÃO DE VAZAMENTOS NOS CARDS (FOTOS 2 E 3) */
+  /* Conteúdos e Banners no Celular */
   .info-card,
   .featured-banner,
   .sponsor-card,
   .social-channels-box,
   .workflow-box {
     width: 100% !important;
-    max-width: 100% !important;
     padding: 20px 15px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
   }
 
-  /* Grid de Conteúdos (Nossos Conteúdos) */
   .content-pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
   }
 
-  /* Ajuste de plano de parceiros */
-  .plan-box {
-    width: 100%;
+  /* Onde Estamos e Como Funciona Apenas no Celular */
+  .social-channels-box .section-header-title,
+  .workflow-box .section-header-title {
+    justify-content: center !important;
+    text-align: center !important;
   }
 
-  /* Onde Estamos & Como Funciona em Grid Responsivo para não cortar textos */
   .channels-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px 5px;
-    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 15px 5px !important;
+    width: 100% !important;
+    justify-items: center !important;
+  }
+
+  .channels-list .channel-item:nth-child(1),
+  .channels-list .channel-item:nth-child(2),
+  .channels-list .channel-item:nth-child(3) {
+    grid-column: span 2 !important;
+  }
+
+  .channels-list .channel-item:nth-child(4) {
+    grid-column: 2 / span 2 !important;
+  }
+
+  .channels-list .channel-item:nth-child(5) {
+    grid-column: 4 / span 2 !important;
   }
 
   .workflow-steps {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px 10px;
-    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px 10px !important;
+    width: 100% !important;
+    justify-items: center !important;
   }
 
   .step-arrow {
-    display: none;
+    display: none !important;
   }
 
-  /* 3. ALINHAMENTO CENTRAL DO RODAPÉ (FOTO 1) */
+  /* Rodapé Apenas no Celular */
   .footer-section {
     padding: 40px 15px 30px 15px !important;
     text-align: center !important;
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
     text-align: center !important;
   }
 
   .footer-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     text-align: center !important;
   }
 
-  .footer-col h4 {
+  .footer-col h4,
+  .footer-col p {
     text-align: center !important;
   }
 
   .footer-list {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .footer-list li {
@@ -913,6 +861,5 @@ html, body {
 
   .footer-brand-logo {
     justify-content: center !important;
-    margin-top: 10px;
   }
 }
