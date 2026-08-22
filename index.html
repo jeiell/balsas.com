@@ -23,12 +23,8 @@
     <header class="hero-section">
         <div class="hero-top">
             <div class="brand-box">
-                <!-- COMO DEVE FICAR -->
-                <!-- COMO DEVE FICAR NO INDEX.HTML -->
-                <div class="brand-box">
-                    <div class="logo-container">
-                        <img src="logo.png" alt="Balsas.com" class="main-logo-img">
-                    </div>
+                <div class="logo-container">
+                    <img src="logo.png" alt="Balsas.com" class="main-logo-img">
                 </div>
             </div>
 
@@ -40,7 +36,7 @@
         </div>
 
         <nav class="hero-nav">
-            <a href="#agro" class="nav-item">
+            <a href="agro.html" class="nav-item">
                 <i class="fa-solid fa-wheat-awn"></i>
                 <span>Agro</span>
             </a>
@@ -48,11 +44,11 @@
                 <i class="fa-solid fa-chart-line"></i>
                 <span>Economia</span>
             </a>
-            <a href="#empresas" class="nav-item">
+            <a href="empresas.html" class="nav-item">
                 <i class="fa-solid fa-city"></i>
                 <span>Empresas</span>
             </a>
-            <a href="#perfil" class="nav-item">
+            <a href="perfil.html" class="nav-item">
                 <i class="fa-solid fa-user-tie"></i>
                 <span>Perfil Empreendedor</span>
             </a>
@@ -94,8 +90,8 @@
                 </ul>
             </div>
 
-            <div class="featured-banner video-trigger" id="perfil" data-title="Perfil Empreendedor - Episódio Especial"
-                data-category="Quadro Destaque"
+            <div class="featured-banner video-trigger" id="perfil-destaque"
+                data-title="Perfil Empreendedor - Episódio Especial" data-category="Quadro Destaque"
                 data-desc="Histórias reais de quem construiu sua trajetória de sucesso e transformou os negócios em Balsas."
                 data-img="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80">
                 <i class="fa-solid fa-expand camera-icon"></i>
@@ -118,10 +114,8 @@
 
                 <div class="content-pillars-grid">
 
-                    <div class="pillar-item video-trigger" id="agro" data-title="Tecnologia no Safra de Balsas"
-                        data-category="Agro"
-                        data-desc="Inovação, máquinas pesadas e alta produtividade no campo da região."
-                        data-img="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80">
+                    <!-- AGRO (Abre página agro.html) -->
+                    <a href="agro.html" class="pillar-item-link">
                         <div class="pillar-img-box">
                             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=400&q=80"
                                 alt="Agro">
@@ -129,12 +123,10 @@
                         </div>
                         <h3>AGRO</h3>
                         <p>Produção, tecnologia, fazendas, máquinas, mercado e muito mais.</p>
-                    </div>
+                    </a>
 
-                    <div class="pillar-item video-trigger" id="empresas" data-title="Giro de Negócios & Comércio"
-                        data-category="Mercado & Empresas"
-                        data-desc="Empresas e marcas que impulsionam o comércio e o setor de serviços."
-                        data-img="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80">
+                    <!-- MERCADO & EMPRESAS (Abre página empresas.html) -->
+                    <a href="empresas.html" class="pillar-item-link">
                         <div class="pillar-img-box">
                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80"
                                 alt="Mercado">
@@ -142,12 +134,10 @@
                         </div>
                         <h3>MERCADO & EMPRESAS</h3>
                         <p>Empresas, comércio, indústria, serviços e inovação.</p>
-                    </div>
+                    </a>
 
-                    <div class="pillar-item video-trigger" data-title="Depoimentos Inspiradores"
-                        data-category="Perfil Empreendedor"
-                        data-desc="Assista aos vídeos curtos de 1min30s contando histórias inspiradoras."
-                        data-img="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80">
+                    <!-- PERFIL EMPREENDEDOR (Abre página perfil.html) -->
+                    <a href="perfil.html" class="pillar-item-link">
                         <div class="pillar-img-box">
                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
                                 alt="Empreendedor">
@@ -155,11 +145,12 @@
                         </div>
                         <h3>PERFIL EMPREENDEDOR</h3>
                         <p>Depoimentos e histórias de empreendedores que inspiram.</p>
-                    </div>
+                    </a>
 
-                    <div class="pillar-item video-trigger" id="economia" data-title="Números & Investimentos"
+                    <!-- ECONOMIA (Abre Modal / Player de Vídeo) -->
+                    <div class="pillar-item video-trigger" id="economia" data-title="Números & Investimentos em Balsas"
                         data-category="Economia"
-                        data-desc="Geração de empregos, dados e o crescimento econômico da cidade."
+                        data-desc="Assista às análises sobre geração de empregos, dados econômicos e novos investimentos no município."
                         data-img="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80">
                         <div class="pillar-img-box">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80"
@@ -170,9 +161,10 @@
                         <p>Números, dados, investimentos, geração de empregos e análises.</p>
                     </div>
 
-                    <div class="pillar-item video-trigger" id="cidade" data-title="Viva Balsas!"
-                        data-category="A Cidade"
-                        data-desc="Cultura, lazer, eventos e o desenvolvimento urbano de Balsas."
+                    <!-- VIVA BALSAS (Abre Modal / Player de Vídeo) -->
+                    <div class="pillar-item video-trigger" id="cidade"
+                        data-title="Viva Balsas! Cultura e Desenvolvimento" data-category="Viva Balsas"
+                        data-desc="Confira a cobertura dos principais eventos, pontos turísticos, gastronomia e qualidade de vida da nossa cidade."
                         data-img="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80">
                         <div class="pillar-img-box">
                             <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=400&q=80"
@@ -338,7 +330,6 @@
 
             <div class="footer-col footer-cta">
                 <h3>Vamos Construir o Futuro de Balsas <span>Juntos!</span></h3>
-                <!-- COMO DEVE FICAR -->
                 <div class="footer-brand-logo">
                     <img src="logo.png" alt="Balsas.com" class="footer-logo-img">
                 </div>

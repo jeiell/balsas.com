@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGRO - Balsas.com</title>
+  
+  <!-- Estilos Globais e Fontes -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOPO PADRÃO DO SITE -->
+  <header class="hero-section" style="padding-bottom: 20px;">
+    <div class="hero-top">
+      <div class="brand-box">
+        <a href="index.html" class="logo-container">
+          <img src="logo.png" alt="Balsas.com" class="main-logo-img">
+        </a>
+      </div>
+      <div class="hero-headline">
+        <h1>A vitrine do <span>AGRO</span> para o Brasil.</h1>
+        <p>Acompanhe coberturas de dias de campo, tecnologia agrícola, histórias dos produtores e inovações da nossa região.</p>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="hero-nav">
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> HOME</a>
+      <a href="agro.html" class="nav-item" style="color: var(--primary-red);"><i class="fa-solid fa-wheat-awn"></i> AGRO</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-chart-line"></i> ECONOMIA</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-city"></i> CIDADE</a>
+      <a href="#" class="nav-item"><i class="fa-solid fa-user-tie"></i> EMPREENDEDOR</a>
+    </nav>
+  </header>
+
+  <!-- SEÇÃO DA BIBLIOTECA DE CONTEÚDOS -->
+  <main class="section-container">
+    <div class="section-header-title">
+      <i class="fa-solid fa-wheat-awn"></i> AGRO & TECNOLOGIA NO CAMPO
+    </div>
+
+    <!-- Filtros de Subcategorias -->
+    <div class="category-filters">
+      <button class="filter-btn active">Todos</button>
+      <button class="filter-btn">Dia de Campo</button>
+      <button class="filter-btn">Tecnologia</button>
+      <button class="filter-btn">Fazendas</button>
+      <button class="filter-btn">Histórias do Campo</button>
+    </div>
+
+    <!-- Grade da Biblioteca (Cronológica) -->
+    <div class="feed-grid">
+      
+      <!-- Card 1 (Mais Recente) -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Dia de Campo">
+          <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.65rem; padding: 2px 6px; font-weight: 700;">VÍDEO</span>
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">22 AGO 2026 • DIA DE CAMPO</span>
+          <h3 class="feed-title">Cobertura Especial: Inovações na Colheita da Safra em Balsas</h3>
+          <p style="font-size: 0.75rem; color: #666;">Acompanhe o evento com os principais produtores rurais e máquinas de última geração.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Tecnologia no Campo">
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">18 AGO 2026 • TECNOLOGIA</span>
+          <h3 class="feed-title">Uso de Drones para Mapeamento de Solo na Região Sul do MA</h3>
+          <p style="font-size: 0.75rem; color: #666;">Como a agricultura de precisão está aumentando a produtividade por hectare.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Fazenda Destaque">
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">10 AGO 2026 • FAZENDAS</span>
+          <h3 class="feed-title">Conheça a Fazenda Destaque em Sustentabilidade de 2026</h3>
+          <p style="font-size: 0.75rem; color: #666;">Práticas de plantio direto e manejo inteligente preservando os recursos naturais.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer-section">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>SOBRE O BALSAS.COM</h4>
+        <p>A maior vitrine de conteúdo e negócios da região de Balsas-MA.</p>
+      </div>
+      <div class="footer-col">
+        <h4>VOLTAR</h4>
+        <ul class="footer-list">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Página Inicial</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

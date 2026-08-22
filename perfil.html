@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PERFIL EMPREENDEDOR - Balsas.com</title>
+  
+  <!-- Estilos Globais e Fontes -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOPO PADRÃO DO SITE -->
+  <header class="hero-section" style="padding-bottom: 20px;">
+    <div class="hero-top">
+      <div class="brand-box">
+        <a href="index.html" class="logo-container">
+          <img src="logo.png" alt="Balsas.com" class="main-logo-img">
+        </a>
+      </div>
+      <div class="hero-headline">
+        <h1>Histórias de quem faz <span>BALSAS</span> acontecer.</h1>
+        <p>Entrevistas exclusivas, trajetórias inspiradoras e depoimentos de grandes empresários que transformam nossa região.</p>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="hero-nav">
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> HOME</a>
+      <a href="agro.html" class="nav-item"><i class="fa-solid fa-wheat-awn"></i> AGRO</a>
+      <a href="empresas.html" class="nav-item"><i class="fa-solid fa-chart-line"></i> MERCADO & EMPRESAS</a>
+      <a href="perfil.html" class="nav-item" style="color: var(--primary-red);"><i class="fa-solid fa-user-tie"></i> EMPREENDEDOR</a>
+      <a href="cidade.html" class="nav-item"><i class="fa-solid fa-location-dot"></i> CIDADE</a>
+    </nav>
+  </header>
+
+  <!-- SEÇÃO DA BIBLIOTECA DE CONTEÚDOS -->
+  <main class="section-container">
+    <div class="section-header-title">
+      <i class="fa-solid fa-user-tie"></i> PERFIL EMPREENDEDOR & DEPOIMENTOS
+    </div>
+
+    <!-- Filtros de Subcategorias -->
+    <div class="category-filters">
+      <button class="filter-btn active">Todos</button>
+      <button class="filter-btn">Entrevistas</button>
+      <button class="filter-btn">Trajetórias</button>
+      <button class="filter-btn">Vídeo-Depoimentos</button>
+      <button class="filter-btn">Jovens Empreendedores</button>
+    </div>
+
+    <!-- Grade da Biblioteca (Cronológica) -->
+    <div class="feed-grid">
+      
+      <!-- Card 1 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Entrevista">
+          <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.65rem; padding: 2px 6px; font-weight: 700;">VÍDEO</span>
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">21 AGO 2026 • ENTREVISTA</span>
+          <h3 class="feed-title">De Pequeno Negócio a Referência Regional: A Trajetória de Sucesso de João Silva</h3>
+          <p style="font-size: 0.75rem; color: #666;">Assista ao depoimento emocionante sobre os desafios e estratégias para consolidar sua marca em Balsas.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Empreendedorismo Feminino">
+          <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.65rem; padding: 2px 6px; font-weight: 700;">VÍDEO</span>
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">16 AGO 2026 • VÍDEO-DEPOIMENTO</span>
+          <h3 class="feed-title">Liderança Feminina no Sul do Maranhão: A História de Maria Oliveira</h3>
+          <p style="font-size: 0.75rem; color: #666;">Como a empresária transformou o setor de serviços e gera dezenas de empregos diretos.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Jovem Empreendedor">
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">11 AGO 2026 • JOVENS EMPREENDEDORES</span>
+          <h3 class="feed-title">A Nova Geração do Comércio: Inovando no Atacado e Varejo</h3>
+          <p style="font-size: 0.75rem; color: #666;">Como novos gestores estão trazendo visões modernas para negócios tradicionais de família.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer-section">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>SOBRE O BALSAS.COM</h4>
+        <p>A maior vitrine de conteúdo e negócios da região de Balsas-MA.</p>
+      </div>
+      <div class="footer-col">
+        <h4>VOLTAR</h4>
+        <ul class="footer-list">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Página Inicial</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

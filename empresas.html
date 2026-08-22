@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MERCADO & EMPRESAS - Balsas.com</title>
+  
+  <!-- Estilos Globais e Fontes -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOPO PADRÃO DO SITE -->
+  <header class="hero-section" style="padding-bottom: 20px;">
+    <div class="hero-top">
+      <div class="brand-box">
+        <a href="index.html" class="logo-container">
+          <img src="logo.png" alt="Balsas.com" class="main-logo-img">
+        </a>
+      </div>
+      <div class="hero-headline">
+        <h1>A vitrine do <span>MERCADO & EMPRESAS</span> de Balsas.</h1>
+        <p>Acompanhe novidades sobre o comércio local, indústria, prestadores de serviços, inovações e giro de negócios da região.</p>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="hero-nav">
+      <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i> HOME</a>
+      <a href="agro.html" class="nav-item"><i class="fa-solid fa-wheat-awn"></i> AGRO</a>
+      <a href="empresas.html" class="nav-item" style="color: var(--primary-red);"><i class="fa-solid fa-chart-line"></i> MERCADO & EMPRESAS</a>
+      <a href="perfil.html" class="nav-item"><i class="fa-solid fa-user-tie"></i> EMPREENDEDOR</a>
+      <a href="cidade.html" class="nav-item"><i class="fa-solid fa-location-dot"></i> CIDADE</a>
+    </nav>
+  </header>
+
+  <!-- SEÇÃO DA BIBLIOTECA DE CONTEÚDOS -->
+  <main class="section-container">
+    <div class="section-header-title">
+      <i class="fa-solid fa-chart-line"></i> MERCADO, NEGÓCIOS & INOVAÇÃO
+    </div>
+
+    <!-- Filtros de Subcategorias -->
+    <div class="category-filters">
+      <button class="filter-btn active">Todos</button>
+      <button class="filter-btn">Comércio</button>
+      <button class="filter-btn">Indústria</button>
+      <button class="filter-btn">Serviços</button>
+      <button class="filter-btn">Inovação</button>
+    </div>
+
+    <!-- Grade da Biblioteca (Cronológica) -->
+    <div class="feed-grid">
+      
+      <!-- Card 1 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Comércio Local">
+          <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.65rem; padding: 2px 6px; font-weight: 700;">MATÉRIA</span>
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">22 AGO 2026 • COMÉRCIO</span>
+          <h3 class="feed-title">Avanço do Comércio Local: Novas Franquias Investem no Centro de Balsas</h3>
+          <p style="font-size: 0.75rem; color: #666;">Setor varejista registra crescimento positivo e atrai marcas nacionais para o município.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Inovação">
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">19 AGO 2026 • INOVAÇÃO</span>
+          <h3 class="feed-title">Tecnologia no Setor de Serviços: Empresas Locais Automatizam Atendimento</h3>
+          <p style="font-size: 0.75rem; color: #666;">Como a transformação digital está acelerando as vendas e melhorando a experiência do cliente.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="feed-card">
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" class="feed-thumb" alt="Indústria">
+        </div>
+        <div class="feed-body">
+          <span class="feed-date">15 AGO 2026 • INDÚSTRIA</span>
+          <h3 class="feed-title">Polo Industrial de Balsas Aumenta Capacidade de Produção</h3>
+          <p style="font-size: 0.75rem; color: #666;">Novos investimentos fortalecem a cadeia de suprimentos e logística no sul do Maranhão.</p>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer-section">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>SOBRE O BALSAS.COM</h4>
+        <p>A maior vitrine de conteúdo e negócios da região de Balsas-MA.</p>
+      </div>
+      <div class="footer-col">
+        <h4>VOLTAR</h4>
+        <ul class="footer-list">
+          <li><a href="index.html" style="color: #ccc; text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Página Inicial</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
