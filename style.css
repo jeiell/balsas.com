@@ -685,95 +685,150 @@ body {
   line-height: 1.3;
 }
 
-/* RESPONSIVIDADE */
+/* ===================================
+   RESPONSIVIDADE E MOBILE-FIRST REAL
+=================================== */
+
+/* Ajustes de tipografia fluida */
+.hero-headline h1 {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+}
+
+.hero-headline p {
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+}
+
+/* TABLETS E TELAS MÉDIAS (até 992px) */
 @media (max-width: 992px) {
+  .hero-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-headline {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-nav {
+    justify-content: center;
+    gap: 20px;
+  }
+
   .grid-three-col,
   .main-grid-layout,
   .middle-features-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .content-pillars-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .hero-top,
-  .hero-headline,
-  .footer-cta,
+  .footer-cta, 
   .footer-brand-logo {
-    text-align: left;
-    justify-content: flex-start;
-  }
-
-  .hero-nav {
-    justify-content: flex-start;
+    text-align: center;
+    justify-content: center;
   }
 }
 
-@media (max-width: 576px) {
-  .content-pillars-grid {
-    grid-template-columns: 1fr;
+/* SMARTPHONES (até 600px) */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 25px 4% 20px 4%;
   }
 
-  .channels-list,
+  .main-logo-img {
+    height: 70px; /* Logo no tamanho ideal para telas pequenas */
+  }
+
+  /* Menu do topo compacto em 3 colunas no celular */
+  .hero-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 10px;
+    width: 100%;
+  }
+
+  .nav-item {
+    font-size: 0.65rem;
+  }
+
+  .nav-item i {
+    font-size: 1.1rem;
+  }
+
+  /* Grid de Conteúdos em 2 Colunas (Mobile Clean) */
+  .content-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .pillar-img-box {
+    height: 130px;
+  }
+
+  .pillar-item h3 {
+    font-size: 0.75rem;
+  }
+
+  .pillar-item p {
+    font-size: 0.65rem;
+  }
+
+  /* Onde Estamos em Linha (Horizontal) */
+  .channels-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    align-items: start;
+  }
+
+  .channel-item i {
+    font-size: 1.3rem;
+  }
+
+  .channel-item .name {
+    font-size: 0.55rem;
+  }
+
+  .channel-item .handle {
+    display: none; /* Oculta arrobas no celular para não poluir */
+  }
+
+  /* Como Funciona em Grid Compacto */
   .workflow-steps {
-    flex-direction: column;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    align-items: start;
   }
 
   .step-arrow {
-    transform: rotate(90deg);
+    display: none; /* Esconde setas para caber perfeitamente na horizontal */
   }
-}
 
-/* HOVER EFFECTS: ONDE ESTAMOS & COMO FUNCIONA */
-.channel-item {
-  transition: transform 0.3s ease, color 0.3s ease;
-  padding: 8px 5px;
-  border-radius: 4px;
-}
+  .step-item i {
+    font-size: 1.1rem;
+  }
 
-.channel-item i {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
+  .step-item .step-title {
+    font-size: 0.6rem;
+  }
 
-.channel-item:hover {
-  transform: translateY(-5px);
-}
+  .step-item .step-desc {
+    font-size: 0.55rem;
+  }
 
-.channel-item:hover i {
-  transform: scale(1.2);
-}
+  .footer-grid {
+    text-align: center;
+  }
 
-.channel-item:hover .name {
-  color: var(--primary-red);
-}
-
-.step-item {
-  transition: transform 0.3s ease;
-  cursor: default;
-  padding: 5px;
-}
-
-.step-item i {
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.step-item:hover {
-  transform: translateY(-3px);
-}
-
-.step-item:hover i {
-  color: var(--primary-red);
-  transform: scale(1.2);
-}
-
-.step-item:hover .step-title {
-  color: var(--primary-red);
-}
-
-.step-item:hover + .step-arrow {
-  transform: translateX(3px);
-  transition: transform 0.3s ease;
+  .footer-list li {
+    justify-content: center;
+  }
 }
